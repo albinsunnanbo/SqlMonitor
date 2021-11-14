@@ -1,0 +1,6 @@
+- module: system
+  period: 10s
+  metricsets:
+    - cpu
+    - memory
+  processes: ['.*']

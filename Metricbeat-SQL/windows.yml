@@ -1,0 +1,58 @@
+- module: windows
+  metricsets: ["perfmon"]
+  period: 10s
+  perfmon.counters:
+    - instance_label: 'processor.name'
+      instance_name: 'SQL Batch Requests'
+      measurement_label: 'processor.time.total.pct'
+      query: 'SQLServer:SQL Statistics\Batch Requests/sec'
+
+    - instance_label: 'processor.name'
+      instance_name: 'SQL Compilations'
+      measurement_label: 'processor.time.total.pct'
+      query: 'SQLServer:SQL Statistics\SQL Compilations/sec'
+
+    - instance_label: 'processor.name'
+      instance_name: 'SQL Re-Compilations'
+      measurement_label: 'processor.time.total.pct'
+      query: 'SQLServer:SQL Statistics\SQL Re-Compilations/sec'
+
+    - instance_label: 'processor.name'
+      instance_name: 'SQL Forwarded Records'
+      measurement_label: 'processor.time.total.pct'
+      query: 'SQLServer:Access Methods\Forwarded Records/sec'
+
+    - instance_label: 'processor.name'
+      instance_name: 'SQL Page Splits'
+      measurement_label: 'processor.time.total.pct'
+      query: 'SQLServer:Access Methods\Page Splits/sec'
+
+    - instance_label: 'processor.name'
+      instance_name: 'SQL Full Scans'
+      measurement_label: 'processor.time.total.pct'
+      query: 'SQLServer:Access Methods\Full Scans/sec'
+
+    - instance_label: 'processor.name'
+      instance_name: 'SQL Index Searches'
+      measurement_label: 'processor.time.total.pct'
+      query: 'SQLServer:Access Methods\Index Searches/sec'
+
+    - instance_label: 'processor.name'
+      instance_name: 'SQL Processes blocked'
+      measurement_label: 'processor.time.total.pct'
+      query: 'SQLServer:General Statistics\Processes blocked'
+
+    - instance_label: 'processor.name'
+      instance_name: 'SQL Deadlocks'
+      measurement_label: 'processor.time.total.pct'
+      query: 'SQLServer:Locks(_Total)\Number of Deadlocks/sec'
+
+    - instance_label: 'processor.name'
+      instance_name: 'SQL Page Life Expectancy'
+      measurement_label: 'processor.time.total.pct'
+      query: 'SQLServer:Buffer Manager\Page life expectancy'
+
+    - instance_label: 'processor.name'
+      instance_name: 'SQL Buffer cache hit ratio'
+      measurement_label: 'processor.time.total.pct'
+      query: 'SQLServer:Buffer Manager\Buffer cache hit ratio'
